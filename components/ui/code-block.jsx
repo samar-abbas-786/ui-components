@@ -10,6 +10,7 @@ export const CodeBlock = ({
   code,
   highlightLines = [],
   tabs = [],
+  bg,
 }) => {
   const [copied, setCopied] = React.useState(false);
   const [activeTab, setActiveTab] = React.useState(0);
@@ -34,7 +35,9 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative w-full rounded-lg bg-slate-900 p-4 font-mono text-sm">
+    <div
+      className={`relative w-full rounded-lg ${bg} p-4 font-mono text-sm overflow-x-scroll scrollbar-hide`}
+    >
       <div className="flex flex-col gap-2">
         {tabsExist && (
           <div className="flex  overflow-x-auto">
@@ -67,6 +70,7 @@ export const CodeBlock = ({
       </div>
       <SyntaxHighlighter
         language={activeLanguage}
+        className="overflow-x-scroll scrollbar-hide"
         style={atomDark}
         customStyle={{
           margin: 0,
