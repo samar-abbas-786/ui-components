@@ -13,14 +13,14 @@ import { Button } from "@/components/ui/moving-border";
 
 export default function Home() {
   return (
-    <div className="w-full h-full relative bg-black">
+    <div className="w-full min-h-screen relative bg-stone-950">
       <SparklesCore
         id="tsparticlesfullpage"
         background="transparent"
         minSize={0.6}
         maxSize={1.4}
         particleDensity={100}
-        className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"
+        className="fixed top-0 left-0 w-full h-full z-0"
         particleColor="#FFFFFF"
       />
       {/* <AuroraBackground>
@@ -40,9 +40,8 @@ export default function Home() {
       </div> */}
       {/* 3rd background */}
       <div>
-        {/* <BackgroundLines className="z-0 absolute bg-transparent " /> */}
-
-        <div className="text-center z-20 font-medium relative text-white  flex flex-col h-[100vh] px-32 justify-center items-center">
+        {/* <BackgroundLines className="z-10 relative " /> */}
+        <div className="text-center font-medium relative text-white z-10 flex flex-col h-[100vh] px-32 justify-center items-center">
           <h1 className="text-white text-6xl font-bold px-44 ">
             Sanjana Airlines, Sajana Textiles.
           </h1>
@@ -69,14 +68,14 @@ export default function Home() {
           </p>
         </div>
       </div> */}
-      <div className="bg-black flex">
+      <div className=" flex">
         {/* <div className="text-gray-100 font-extrabold text-6xl">
           Side Section
         </div> */}
 
         <ContainerScroll
           titleComponent={
-            <h1 className="text-slate-200 z-10 relative font-extrabold text-4xl mb-6">
+            <h1 className="text-slate-200 font-extrabold text-4xl mb-6">
               Transcriptify
             </h1>
           }
@@ -92,9 +91,15 @@ export default function Home() {
       </div>
       {/* <FloatingDock></FloatingDock> */}
       {/* <Globe /> */}
-      <h1 className="text-white text-7xl font-bold text-center py-5">
-        My Name is Samar Abbas
-      </h1>
+      {/* <SparklesCore
+        id="tsparticlesfullpage"
+        background="transparent"
+        minSize={0.6}
+        maxSize={1.4}
+        particleDensity={100}
+        className="w-full h-full"
+        particleColor="#FFFFFF"
+      /> */}
     </div>
   );
 }
