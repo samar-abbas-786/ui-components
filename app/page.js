@@ -110,10 +110,12 @@ export default FightCounter;`;
         className="fixed top-0 left-0 w-full h-full z-0"
         particleColor="#ae09b8"
       />
-      <FloatingNav
-        className="fixed right-0 top-0 bg-white text-black"
-        navItems={navItems}
-      />
+      <div className="">
+        <FloatingNav
+          className="fixed left-0 top-10 bg-black text-white font-semibold space-x-14"
+          navItems={navItems}
+        />
+      </div>
       {/* <AuroraBackground>
         <div className="text-white text-center">
           <h1 className="text-white font-bold text-7xl px-28">
