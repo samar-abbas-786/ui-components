@@ -145,3 +145,7 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

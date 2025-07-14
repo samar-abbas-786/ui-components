@@ -19,11 +19,11 @@ export default function Home() {
   const [c, setC] = useState(false);
 
   const [cod, setCod] = useState();
-  useEffect(() => {
-    setInterval(() => {
-      setC(!c);
-    }, [10000]);
-  }, [c]);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setC(!c);
+  //   }, [10000]);
+  // }, [c]);
   const code = `const DummyComponent = () => {
   const [count, setCount] = React.useState(0);
  
@@ -111,7 +111,7 @@ export default FightCounter;`;
         particleColor="#ae09b8"
       />
       <FloatingNav
-        className="fixed right-0 top-0 bg-slate-950 text-white"
+        className="fixed right-0 top-0 bg-white text-black"
         navItems={navItems}
       />
       {/* <AuroraBackground>
