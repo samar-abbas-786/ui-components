@@ -9,6 +9,8 @@ import { Globe } from "@/components/ui/globe";
 import { SparklesCore } from "@/components/ui/sparkles";
 import Image from "next/image";
 import { jsx } from "react/jsx-runtime";
+import { Button } from "@/components/ui/moving-border";
+
 export default function Home() {
   return (
     <div>
@@ -39,6 +41,11 @@ export default function Home() {
             I'm able to merge pull requests that look safe from time to time but
             no commitment on timelines here.{" "}
           </p>
+          <div className="mt-8">
+            <Button className="bg-slate-950 text-white">
+              Start Creating Magic
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -52,11 +59,29 @@ export default function Home() {
           </p>
         </div>
       </div> */}
-      <ContainerScroll titleComponent={"Transcriptify"}>
-        <Image width={8000} height={600} src="/fileimg.png" alt="Description" />
-      </ContainerScroll>
+      <div className="bg-black flex">
+        {/* <div className="text-gray-100 font-extrabold text-6xl">
+          Side Section
+        </div> */}
+
+        <ContainerScroll
+          titleComponent={
+            <h1 className="text-slate-200 font-extrabold text-4xl mb-6">
+              Transcriptify
+            </h1>
+          }
+        >
+          <Image
+            width={8000}
+            height={600}
+            src="/fileimg.png"
+            alt="Description"
+            className="object-fill"
+          />
+        </ContainerScroll>
+      </div>
       {/* <FloatingDock></FloatingDock> */}
-      {/* <Globe></Globe> */}
+      {/* <Globe /> */}
       {/* <SparklesCore
         id="tsparticlesfullpage"
         background="transparent"
