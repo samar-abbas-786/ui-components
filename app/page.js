@@ -13,7 +13,16 @@ import { Button } from "@/components/ui/moving-border";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full h-full relative bg-black">
+      <SparklesCore
+        id="tsparticlesfullpage"
+        background="transparent"
+        minSize={0.6}
+        maxSize={1.4}
+        particleDensity={100}
+        className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"
+        particleColor="#FFFFFF"
+      />
       {/* <AuroraBackground>
         <div className="text-white text-center">
           <h1 className="text-white font-bold text-7xl px-28">
@@ -31,8 +40,9 @@ export default function Home() {
       </div> */}
       {/* 3rd background */}
       <div>
-        <BackgroundLines className="z-0 absolute " />
-        <div className="text-center font-medium relative text-white z-10 flex flex-col h-[100vh] px-32 justify-center items-center">
+        {/* <BackgroundLines className="z-0 absolute bg-transparent " /> */}
+
+        <div className="text-center z-20 font-medium relative text-white  flex flex-col h-[100vh] px-32 justify-center items-center">
           <h1 className="text-white text-6xl font-bold px-44 ">
             Sanjana Airlines, Sajana Textiles.
           </h1>
@@ -66,7 +76,7 @@ export default function Home() {
 
         <ContainerScroll
           titleComponent={
-            <h1 className="text-slate-200 font-extrabold text-4xl mb-6">
+            <h1 className="text-slate-200 z-10 relative font-extrabold text-4xl mb-6">
               Transcriptify
             </h1>
           }
@@ -82,15 +92,9 @@ export default function Home() {
       </div>
       {/* <FloatingDock></FloatingDock> */}
       {/* <Globe /> */}
-      {/* <SparklesCore
-        id="tsparticlesfullpage"
-        background="transparent"
-        minSize={0.6}
-        maxSize={1.4}
-        particleDensity={100}
-        className="w-full h-full"
-        particleColor="#FFFFFF"
-      /> */}
+      <h1 className="text-white text-7xl font-bold text-center py-5">
+        My Name is Samar Abbas
+      </h1>
     </div>
   );
 }
